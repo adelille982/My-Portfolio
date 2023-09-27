@@ -1,0 +1,335 @@
+/* Reset CSS pour assurer une base cohérente entre les différents navigateurs */
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles pour l'élément racine "html" et le "body" (corps du document) */
+body 
+{
+    font-family: Arial, sans-serif;  /* Définit la police par défaut du document */
+    margin: 0;  /* Supprime les marges par défaut */
+}
+
+/* Styles pour l'en-tête de la page */
+header 
+{
+    width: 100%;  /* Largeur complète de la page */
+    margin: 0;  /* Supprime les marges par défaut */
+}
+
+/* Conteneur pour l'image principale dans l'en-tête */
+#imageprincipal 
+{
+    position: relative;  /* Positionne par rapport à lui-même */
+    width: 100%;  /* Largeur complète de la page */
+    padding-bottom: 37.5%;  /* Crée un ratio hauteur/largeur */
+    overflow: hidden;  /* Cache tout contenu débordant du conteneur */
+}
+
+/* Styles spécifiques pour l'image à l'intérieur du conteneur "#imageprincipal" */
+#imageprincipal img 
+{
+    position: absolute;  /* Positionne par rapport à son parent le plus proche positionné */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Assure que l'image couvre tout le conteneur */
+}
+
+/* Styles pour la barre de navigation */
+ul 
+{
+    list-style-type: none;  /* Supprime les puces de la liste */
+    display: flex;  /* Affiche les éléments de la liste en ligne */
+    justify-content: space-around;  /* Répartit uniformément les éléments de la liste */
+    flex-wrap: wrap;  /* Permet aux éléments de la liste de passer à la ligne si nécessaire */
+    padding: 10px 0;  /* Padding vertical pour espacer les éléments */
+    background-color: #333;  /* Couleur d'arrière-plan de la liste */
+    margin: 0;  /* Supprime les marges par défaut */
+}
+
+/* Styles pour chaque élément de la liste */
+ul li 
+{
+    color: white;  /* Couleur du texte */
+    cursor: pointer;  /* Change le curseur en "main" lorsqu'on survole un élément */
+    margin: 5px;  /* Espacement autour de chaque élément */
+}
+
+a 
+{
+    text-decoration: none; /* Supprime le soulignement */
+    color: inherit; /* Utilise la couleur héritée du parent, donc elle ne sera pas bleue par défaut */
+}
+
+/* Pour les liens survolés */
+a:hover 
+{
+    text-decoration: underline; /* Vous pouvez ajouter un soulignement lors du survol si vous le souhaitez */
+}
+
+
+/* Styles pour la section de présentation */
+.presentation 
+{
+    position: relative;  /* Positionne par rapport à lui-même */
+    display: flex;  /* Affiche les éléments enfants en ligne */
+    justify-content: space-between;  /* Espace les éléments enfants uniformément */
+    align-items: center;  /* Centre les éléments enfants verticalement */
+    padding: 20px 0;  /* Padding vertical */
+}
+
+/* Styles pour le texte à l'intérieur de la section de présentation */
+.text 
+{
+    flex: 1;  /* Prend la moitié de l'espace disponible */
+    padding-right: 20px;  /* Espacement à droite */
+    text-align: left;  /* Centre le texte horizontalement */
+    margin-left: 5%;
+}
+
+/* Conteneur pour l'image dans la section de présentation */
+.image 
+{
+    display: flex;  /* Utilise le modèle flexbox */
+    justify-content: center;  /* Centre les éléments enfants horizontalement */
+    align-items: center;  /* Centre les éléments enfants verticalement */
+    height: 350px;  /* Hauteur fixe du conteneur */
+    margin-right: 5%;  /* Marge à droite */
+}
+
+img[src="images/moipetit.jpg"] 
+{
+    border-radius: 50%; /* Ceci rend l'image ronde */
+    display: block;     /* Ceci s'assure que l'image est traitée comme un élément de bloc */
+    margin: 0 auto;     /* Ceci centre l'image horizontalement si elle est plus petite que son conteneur */
+}
+
+
+/* Styles pour l'image à l'intérieur du conteneur ".image" */
+.image img 
+{
+    max-width: 100%;  /* Assure que l'image ne dépasse pas son conteneur */
+    height: auto;  /* Garde le ratio d'aspect de l'image */
+}
+
+h1 
+{
+    font-size: 3.5em;  /* Ceci augmentera la taille du titre. Ajustez selon vos préférences. */
+    margin-bottom: 20px;  /* Ceci ajoutera un espace en dessous du titre. Ajustez selon vos préférences. */
+}
+
+p 
+{
+    font-size: 1.2em;  /* Ceci augmentera la taille du texte du paragraphe. Ajustez selon vos préférences. */
+}
+
+.realisation 
+{
+    text-align: center; /* centre le titre dans la section */
+    padding: 20px 0; /* ajoute un peu d'espace en haut et en bas de la section */
+    margin: 0;
+    padding: 0;
+}
+
+.realisation h2
+{
+    margin-bottom: 20px; /* Ajustez cette valeur selon l'espacement souhaité */
+    margin-top: 20px;
+}
+
+
+.realisation .text2 
+{
+    display: flex;
+    justify-content: space-between; /* pour espacer les images */
+    align-items: center; /* pour les aligner verticalement */
+    padding: 0 5%; /* ajoute un espace sur les côtés pour que les images ne touchent pas les bords */
+    justify-content: center; /* Si vous utilisez Flexbox, cela centrera le contenu */
+}
+
+.realisation .text2 img 
+{
+    width: 90%; /* chaque image prend 30% de la largeur pour laisser un espace entre elles */
+    max-width: 100%; /* rend les images responsives */
+    height: auto; /* maintient le ratio d'aspect */
+    margin: 0 115px; /* Cela ajoute une marge de 5px à gauche et à droite de chaque image, ce qui donnera un espace total de 10px entre deux images adjacentes */
+    padding: 0;
+    margin: 0;
+}
+
+.image-container 
+{
+    width: 60%; /* chaque conteneur prend 30% de la largeur */
+    overflow: hidden; /* cache les parties de l'image qui dépassent du conteneur */
+    padding-bottom: 2%; /* pour un ratio d'aspect de 4:3, ajustez selon vos besoins */
+    position: relative;
+    text-align: center;
+}
+
+.image-container img 
+{
+    width: 100%; /* les images prennent toute la largeur du conteneur */
+    height: 100%; /* les images prennent toute la hauteur du conteneur */
+    object-fit: cover; /* s'assure que l'image couvre tout le conteneur tout en conservant son ratio */
+}
+
+.image-title 
+{
+    text-align: center; /* centre le texte */
+    margin-top: 10px; /* espace entre l'image et le titre */
+    font-size: 1em; /* ajustez la taille du texte selon vos besoins */
+}
+
+.skills-container 
+{
+    text-align: center;
+    width: 100%;  /* Ajustez selon votre design */
+    margin: 0 auto;
+}
+
+h2 
+{
+    margin-bottom: 20px;
+}
+
+.skills-section 
+{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+}
+
+.skills-section::before 
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/Lueur du code sur ecran d-un développeur web mobile 3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;  /* Ajustez cette valeur selon vos besoins */
+    z-index: -1;  /* Place l'image de fond derrière le contenu */
+}
+
+.skill 
+{
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label 
+{
+    color: black;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.progress 
+{
+    width: 45%;
+    background-color: white;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar 
+{
+    height: 25px;
+    background-color: #636363;
+    border-radius: 3px 0 0 3px;
+    transition: width 0.4s ease;
+}
+
+.skills-container2 
+{
+    text-align: center;
+    width: 100%;  /* Ajustez selon votre design */
+    margin: 0 auto;
+}
+
+h2 
+{
+    margin-bottom: 20px;
+}
+
+.skills-section2::before 
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/Développeur web discutant d-une innovation avec son équipe.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;  /* Ajustez cette valeur selon vos besoins */
+    z-index: -1;  /* Place l'image de fond derrière le contenu */
+}
+
+.skills-section2 
+{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    min-height: 900px;  /* Par exemple */
+    display: flex;  /* Ajout de flex pour centrer le formulaire */
+    align-items: center;  /* Centrage vertical */
+    justify-content: center;  /* Centrage horizontal */
+}
+
+.contact-form 
+{
+    width: 80%;  /* Ajustez selon votre design */
+    max-width: 2000px;  /* Ajustez selon votre design */
+    background-color: rgba(255, 255, 255, 0.8);  /* Fond semi-transparent pour améliorer la lisibilité */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);  /* Ombre légère autour du formulaire */
+}
+
+.form-group 
+{
+    margin-bottom: 20px;
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea, 
+input[type="submit"] 
+{
+    width: 100%;  /* Pour que les éléments du formulaire prennent toute la largeur */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+input[type="submit"] 
+{
+    background-color: #222324;  /* Même couleur que vos barres de progression */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover 
+{
+    background-color: #555556;  /* Couleur plus claire lors du survol */
+}
+
+.footer
+{
+    background-color: #a1a1a1;
+}
