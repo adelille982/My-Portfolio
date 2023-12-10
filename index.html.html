@@ -5,96 +5,41 @@
     <meta charset="utf-8" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="stylecssportfolio.css" />
-
     <title>Delille Anthony Portfolio</title>
 </head>
 
 <body>
 
-<nav>
-    <div>
-        <ul class="menu">
-            <a href="#presentation">
-                <li><strong>Présentation</strong></li>
-            </a>
-            <a href="#mes réalisations">
-                <li><strong>Mes Réalisations</strong></li>
-            </a>
-            <a href="#services">
-                <li><strong>Services</strong></li>
-            </a>
-            <a href="#mes compétences">
-                <li><strong>Mes compétences</strong></li>
-            </a>
-            <a href="#contact">
-                <li><strong>Contact</strong></li>
-            </a>
-        </ul>
-        <i class="bi bi-list hamburger-icon" alt="menu-hamburger"></i>
-    </div>
-</nav>
+    <nav>
+        <div>
+            <ul class="menu">
+                <a href="#presentation">
+                    <li><strong>Présentation</strong></li>
+                </a>
+                <a href="#mes réalisations">
+                    <li><strong>Mes Réalisations</strong></li>
+                </a>
+                <a href="#services">
+                    <li><strong>Services</strong></li>
+                </a>
+                <a href="#mes compétences">
+                    <li><strong>Mes compétences</strong></li>
+                </a>
+                <a href="#contact">
+                    <li><strong>Contact</strong></li>
+                </a>
+            </ul>
+            <i class="bi bi-list hamburger-icon" alt="menu-hamburger"></i>
+        </div>
+    </nav>
 
-<header>
-    <div id="imageprincipal">
-        <img src="images/Développeur web et web mobile travaillant sur un projet de pointe.png">
-    </div>
-</header>
-
-<script>
-document.addEventListener('DOMContentLoaded', initializeMenu);
-window.addEventListener('resize', handleResize);
-
-const hamburgerBtn = document.querySelector('.hamburger-icon');
-const menu = document.querySelector('.menu');
-let isNavDisplayed = false; // Suivre l'état d'affichage du menu
-
-hamburgerBtn.addEventListener('click', toggleMenu);
-
-function toggleMenu() {
-    if (isNavDisplayed) {
-        menu.classList.add('hidden'); // Cache le menu
-        hamburgerBtn.classList.remove('bi-x'); // Change en icône de menu burger
-        hamburgerBtn.classList.add('bi-list');
-    } else {
-        menu.classList.remove('hidden'); // Affiche le menu
-        hamburgerBtn.classList.remove('bi-list'); // Change en icône de croix
-        hamburgerBtn.classList.add('bi-x');
-    }
-    isNavDisplayed = !isNavDisplayed; // Bascule l'état d'affichage
-}
-
-function handleResize() {
-    if (window.innerWidth >= 1000) {
-        // Sur les grands écrans, affiche toujours le menu et réinitialise l'icône
-        menu.classList.remove('hidden');
-        hamburgerBtn.classList.remove('bi-x');
-        hamburgerBtn.classList.add('bi-list');
-        isNavDisplayed = true;
-    } else {
-        // Sur les petits écrans, cache toujours le menu et réinitialise l'icône
-        menu.classList.add('hidden');
-        hamburgerBtn.classList.remove('bi-x');
-        hamburgerBtn.classList.add('bi-list');
-        isNavDisplayed = false;
-    }
-}
-
-function initializeMenu() {
-    if (window.innerWidth < 1000) {
-        menu.classList.add('hidden');
-        hamburgerBtn.classList.add('bi-list');
-        hamburgerBtn.classList.remove('bi-x');
-        isNavDisplayed = false;
-    } else {
-        menu.classList.remove('hidden');
-        hamburgerBtn.classList.remove('bi-x');
-        hamburgerBtn.classList.add('bi-list');
-        isNavDisplayed = true;
-    }
-}
-</script>
+    <header>
+        <div id="imageprincipal">
+            <img src="images/Développeur web et web mobile travaillant sur un projet de pointe.png">
+        </div>
+    </header>
 
     <section class="presentation">
         <div class="text">
@@ -121,161 +66,165 @@ function initializeMenu() {
             <div class="image-container">
                 <img src="images/generateur-solaire-portatif.jpg" alt="photo du site generateur-solaire-portatif">
                 <a href="http://www.generateur-solaire-portatif.com"
-                    class="image-title"><strong>www.generateur-solaire-portatif.com</strong></a>
+                    class="image-title"><strong>www.generateur-solaire-portatif.com</strong></a><br>
             </div>
 
             <div class="image-container">
                 <img src="images/rideau-anti-mouche.jpg" alt="photo du site rideau-anti-mouche">
-                <a href="http://www.rideau-anti-mouche.com"class="image-title"><strong>www.rideau-anti-mouche.com</strong></a>
+                <a href="http://www.rideau-anti-mouche.com"
+                    class="image-title"><strong>www.rideau-anti-mouche.com</strong></a><br>
             </div>
 
             <div class="image-container">
-                <img src="images/Des pinceaux numériques plongeant dans des pots de pixels, avec un développeur web les utilisant pour peindre des images générées sur une toile virtuelle immense-fotor-2023092.jpg"alt="développeur assemble méticuleusement des fragments d'images">
-                <div class="image-title"><strong>Mes réalisations MidJourney</strong></div>
+                <img src="images/Des pinceaux numériques plongeant dans des pots de pixels, avec un développeur web les utilisant pour peindre des images générées sur une toile virtuelle immense-fotor-2023092.jpg"
+                    alt="développeur assemble méticuleusement des fragments d'images">
+                <div class="image-title"><strong>Mes réalisations MidJourney</strong></div><br>
                 <!-- ... pour la galerie photo il fallait du JS, je préfère atttendre les cours ... -->
             </div>
         </div>
+    </section>
 
-        <br>
+    <br>
 
-        <section class="services">
-            <h2 id="services">SERVICES</h2>
-            <div class="text2">
-                <div class="image-container">
-                    <img src="images/table de travail éclairée avec des outils numériques MAINTENANCE WEB.png"alt="représentattion catégorie MAINTENANCE WEB">
-                    <div class="image-title"><strong>MAINTENANCE WEB</strong></div><br>
-                </div>
-                <div class="image-container">
-                    <img src="images/bureau moderne où des projets web prennent vie PROJETS WEB.png"
-                        alt="représentattion catégorie PROJET WEB">
-                    <div class="image-title"><strong>PROJET WEB</strong></div><br>
-                </div>
-                <div class="image-container">
-                    <img src="images/espace numérique où tous les appareils sont interconnectés MULTI-PLATEFORME.png"
-                        alt="représentattion catégorie MULTI PLATEFORME">
-                    <div class="image-title"><strong>MULTI PLATEFORME</strong></div><br>
-                </div>
+    <section class="services">
+        <h2 id="services">SERVICES</h2>
+        <div class="text2">
+            <div class="image-container">
+                <img src="images/table de travail éclairée avec des outils numériques MAINTENANCE WEB.png"
+                    alt="représentattion catégorie MAINTENANCE WEB">
+                <div class="image-title"><strong>MAINTENANCE WEB</strong></div><br>
             </div>
-        </section>
-
-        <section>
-            <div class="text2">
-                <div class="image-container">
-                    <img src="images/expert en référencement analysant le trafic d'un site web RÉFÉRENCEMENT.png"
-                        alt="représentattion catégorie REFERENCEMENT">
-                    <div class="image-title"><strong>RÉFÉRENCEMENT</strong></div>
-                </div>
-                <div class="image-container">
-                    <img src="images/développeurs collaborant sur un projet complexe, avec des codes, des algorithmes et des structures de données à l'écran DÉVELOPPEMENT WEB.png"
-                        alt="représentattion catégorie DEVELOPPEMENT WEB">
-                    <div class="image-title"><strong>DÉVELOPPEMENT WEB</strong></div>
-                </div>
-                <div class="image-container">
-                    <img src="images/main tendue vers un autre individu ACCOMPAGNEMENT.png"
-                        alt="représentattion catégorie ACCOMPAGNEMENT">
-                    <div class="image-title"><strong>ACCOMPAGNEMENT</strong></div>
-                </div>
+            <div class="image-container">
+                <img src="images/bureau moderne où des projets web prennent vie PROJETS WEB.png"
+                    alt="représentattion catégorie PROJET WEB">
+                <div class="image-title"><strong>PROJET WEB</strong></div><br>
             </div>
-        </section>
+            <div class="image-container">
+                <img src="images/espace numérique où tous les appareils sont interconnectés MULTI-PLATEFORME.png"
+                    alt="représentattion catégorie MULTI PLATEFORME">
+                <div class="image-title"><strong>MULTI PLATEFORME</strong></div><br>
+            </div>
+        </div>
+        <div class="text2">
+            <div class="image-container">
+                <img src="images/expert en référencement analysant le trafic d'un site web RÉFÉRENCEMENT.png"
+                    alt="représentattion catégorie REFERENCEMENT">
+                <div class="image-title"><strong>RÉFÉRENCEMENT</strong></div><br>
+            </div>
+            <div class="image-container">
+                <img src="images/développeurs collaborant sur un projet complexe, avec des codes, des algorithmes et des structures de données à l'écran DÉVELOPPEMENT WEB.png"
+                    alt="représentattion catégorie DEVELOPPEMENT WEB">
+                <div class="image-title"><strong>DÉVELOPPEMENT WEB</strong></div><br>
+            </div>
+            <div class="image-container">
+                <img src="images/main tendue vers un autre individu ACCOMPAGNEMENT.png"
+                    alt="représentattion catégorie ACCOMPAGNEMENT">
+                <div class="image-title"><strong>ACCOMPAGNEMENT</strong></div><br>
+            </div>
+        </div>
+    </section>
 
-        <br>
+    <br>
 
-        <body>
-            <div class="skills-container">
-                <h2 id="mes compétences">MES COMPÉTENCES</h2>
-                <div class="skills-section">
-                    <div class="skill">
-                        <label for="html5">HTML5</label>
-                        <div class="progress" id="html">
-                            <div class="progress-bar" style="width: 60%;"></div>
-                        </div>
+    <section>
+        <div class="skills-container">
+            <h2 id="mes compétences">MES COMPÉTENCES</h2>
+            <div class="skills-section">
+                <div class="skill">
+                    <label for="html5">HTML5</label>
+                    <div class="progress" id="html">
+                        <div class="progress-bar" style="width: 60%;"></div>
                     </div>
+                </div>
 
-                    <div class="skill">
-                        <label for="css">CSS</label>
-                        <div class="progress" id="css">
-                            <div class="progress-bar" style="width: 60%;"></div>
-                        </div>
+                <div class="skill">
+                    <label for="css">CSS</label>
+                    <div class="progress" id="css">
+                        <div class="progress-bar" style="width: 60%;"></div>
                     </div>
+                </div>
 
-                    <div class="skill">
-                        <label for="php">PHP</label>
-                        <div class="progress" id="php">
-                            <div class="progress-bar" style="width: 50%;"></div>
-                        </div>
+                <div class="skill">
+                    <label for="php">PHP</label>
+                    <div class="progress" id="php">
+                        <div class="progress-bar" style="width: 50%;"></div>
                     </div>
+                </div>
 
-                    <div class="skill">
-                        <label for="wordpress">WORDPRESS</label>
-                        <div class="progress" id="wordpress">
-                            <div class="progress-bar" style="width: 80%;"></div>
-                        </div>
+                <div class="skill">
+                    <label for="wordpress">WORDPRESS</label>
+                    <div class="progress" id="wordpress">
+                        <div class="progress-bar" style="width: 80%;"></div>
                     </div>
+                </div>
 
-                    <div class="skill">
-                        <label for="mysql">MYSQL</label>
-                        <div class="progress" id="mysql">
-                            <div class="progress-bar" style="width: 50%;"></div>
-                        </div>
+                <div class="skill">
+                    <label for="mysql">MYSQL</label>
+                    <div class="progress" id="mysql">
+                        <div class="progress-bar" style="width: 50%;"></div>
                     </div>
+                </div>
 
-                    <div class="skill">
-                        <label for="java">JAVA</label>
-                        <div class="progress" id="java">
-                            <div class="progress-bar" style="width: 0%;"></div>
-                        </div>
+                <div class="skill">
+                    <label for="java">JAVA</label>
+                    <div class="progress" id="java">
+                        <div class="progress-bar" style="width: 0%;"></div>
                     </div>
+                </div>
 
-                    <div class="skill">
-                        <label for="symfony">SYMFONY</label>
-                        <div class="progress" id="symfony">
-                            <div class="progress-bar" style="width: 0%;"></div>
-                        </div>
+                <div class="skill">
+                    <label for="symfony">SYMFONY</label>
+                    <div class="progress" id="symfony">
+                        <div class="progress-bar" style="width: 0%;"></div>
                     </div>
+                </div>
 
-                    <div class="skill">
-                        <label for="javascript">JAVASCRIPT</label>
-                        <div class="progress" id="javascript">
-                            <div class="progress-bar" style="width: 50%;"></div>
-                        </div>
+                <div class="skill">
+                    <label for="javascript">JAVASCRIPT</label>
+                    <div class="progress" id="javascript">
+                        <div class="progress-bar" style="width: 50%;"></div>
                     </div>
                 </div>
             </div>
-        </body>
+        </div>
+    </section>
 
-        <body>
-            <div class="skills-container2">
-                <h2 id="contact">CONTACT</h2>
-                <div class="skill2">
-                    <div class="skills-section2">
-                        <div class="contact-form">
-                            <form action="#" method="post">
-                                <div class="form-group">
-                                    <input type="text" name="name" id="name" placeholder="Nom et Prénom" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" name="email" id="email" placeholder="Votre Email" required>
-                                </div>
-                                <div class="form-group">
-                                    <textarea name="message" id="message" placeholder="Votre Message" rows="5"
-                                        required></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <input type="submit" value="Envoyer Votre Message">
-                                </div>
-                            </form>
-                        </div>
+    <section>
+        <div class="skills-container2">
+            <h2 id="contact">CONTACT</h2>
+            <div class="skill2">
+                <div class="skills-section2">
+                    <div class="contact-form">
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <input type="text" name="name" id="name" placeholder="Nom et Prénom" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" id="email" placeholder="Votre Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" id="message" placeholder="Votre Message" rows="5"
+                                    required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Envoyer Votre Message">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </body>
+        </div>
+    </section>
 
-        <footer>
-            <div class="social-media-icons">
-                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-        </footer>
+
+    <footer>
+        <div class="social-media-icons">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
 
 </html>

@@ -2,7 +2,6 @@
                               CSS général
 /*=========================/*=========================*//*===================/**/
 
-/* Reset CSS pour assurer une base cohérente entre les différents navigateurs */
 * {
     margin: 0;
     padding: 0;
@@ -13,29 +12,24 @@ html {
     width: 100%;
 }
 
-/* Styles pour l'élément racine "html" et le "body" (corps du document) */
 body {
     font-family: Arial, sans-serif;
-    /* Définit la police par défaut du document */
     margin: 0;
-    /* Supprime les marges par défaut */
     background-color: rgb(204, 204, 204);
 }
 nav > div {
-    position: relative; /* Rend le div positionnable relativement pour ses enfants */
-    /* Assurez-vous que ce div occupe toute la largeur nécessaire */
+    position: relative;
 }
 
 .hamburger-icon {
-    position: absolute; /* Positionne l'icône de manière absolue à l'intérieur du div */
-    right: 0; /* Place l'icône à l'extrême droite du div */
-    top: 0; /* Ajustez cette valeur pour aligner l'icône verticalement comme vous le souhaitez */
-    font-size: 50px; /* Ajustez la taille de l'icône */
-    /* Autres styles comme couleur, curseur, etc. */
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 50px;
 }
 
 .hidden {
-    display: none; /* Cache l'élément */
+    display: none;
 }
 
 /*=========================/*=========================/*=========================
@@ -43,7 +37,7 @@ nav > div {
 /*=========================/*=========================*//*===================/**/
 
 header {
-    position: relative; /* Permet un positionnement absolu pour les enfants */
+    position: relative;
     width: 100%;
     margin: 0;
 }
@@ -57,17 +51,16 @@ ul {
 @media screen and (max-width: 1000px) {
 
     header, nav, .presentation .text, .presentation .image {
-        width: 100%; /* Assure que ces éléments prennent la largeur totale */
+        width: 100%;
     }
 
     .presentation .text {
-        text-align: center; /* Centre le texte à l'intérieur du conteneur .text */
+        text-align: center;
     }
 
-    /* Vous pouvez également ajouter des styles spécifiques pour le paragraphe si nécessaire */
     .presentation .text p {
-        margin: 0 auto; /* Ajoute une marge automatique sur les côtés pour centrer */
-        max-width: 90%; /* Vous pouvez ajuster cette valeur selon vos préférences */
+        margin: 0 auto;
+        max-width: 90%;
     }
 }
 
@@ -94,75 +87,51 @@ footer {
 
 /*=========================/*
         CSS image
-/*=========================/*
+/*=========================*/
 
-/* Conteneur pour l'image principale dans l'en-tête */
 #imageprincipal {
     position: relative;
-    /* Positionne par rapport à lui-même */
     width: 100%;
-    /* Largeur complète de la page */
     padding-bottom: 37.5%;
-    /* Crée un ratio hauteur/largeur */
     overflow: hidden;
-    /* Cache tout contenu débordant du conteneur */
 }
 
-/* Styles spécifiques pour l'image à l'intérieur du conteneur "#imageprincipal" */
 #imageprincipal img {
     position: absolute;
-    /* Positionne par rapport à son parent le plus proche positionné */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Assure que l'image couvre tout le conteneur */
 }
 
 /*=========================/*
         CSS navbar
-/*=========================/*
+/*=========================*/
 
-/* Styles pour la barre de navigation */
 ul {
     list-style-type: none;
-    /* Supprime les puces de la liste */
     display: flex;
-    /* Affiche les éléments de la liste en ligne */
     justify-content: space-around;
-    /* Répartit uniformément les éléments de la liste */
     flex-wrap: wrap;
-    /* Permet aux éléments de la liste de passer à la ligne si nécessaire */
     padding: 10px 0;
-    /* Padding vertical pour espacer les éléments */
     background-color: #333;
-    /* Couleur d'arrière-plan de la liste */
     margin: 0;
-    /* Supprime les marges par défaut */
 }
 
-/* Styles pour chaque élément de la liste */
 ul li {
     color: white;
-    /* Couleur du texte */
     cursor: pointer;
-    /* Change le curseur en "main" lorsqu'on survole un élément */
     margin: 5px;
-    /* Espacement autour de chaque élément */
 }
 
 a {
     text-decoration: none;
-    /* Supprime le soulignement */
     color: inherit;
-    /* Utilise la couleur héritée du parent, donc elle ne sera pas bleue par défaut */
 }
 
-/* Pour les liens survolés */
 a:hover {
     text-decoration: underline;
-    /* Vous pouvez ajouter un soulignement lors du survol si vous le souhaitez */
 }
 
 /*=========================/*
@@ -171,12 +140,12 @@ a:hover {
 
 .hamburger-icon {
     position: absolute;
-    top: 10px; /* Ajustez en fonction de la hauteur souhaitée depuis le haut du header */
-    right: 10px; /* Ajustez pour aligner à droite */
-    font-size: 50px; /* Ajustez la taille de l'icône */
-    color: white; /* Change la couleur de l'icône en blanc */
+    top: 10px;
+    right: 10px;
+    font-size: 50px;
+    color: white;
     cursor: pointer;
-    z-index: 1000; /* Assure que l'icône reste au-dessus des autres éléments */
+    z-index: 1000;
 }
 
 @media screen and (max-width: 1000px) {
@@ -203,73 +172,53 @@ a:hover {
                               CSS présentation
 /*=========================/*=========================*//*===================/**/
 
-
-/* Styles pour la section de présentation */
 .presentation {
     position: relative;
-    /* Positionne par rapport à lui-même */
     display: flex;
-    /* Affiche les éléments enfants en ligne */
     justify-content: space-between;
-    /* Espace les éléments enfants uniformément */
     align-items: center;
-    /* Centre les éléments enfants verticalement */
     padding: 20px 0;
-    /* Padding vertical */
 }
 
-/* Styles pour le texte à l'intérieur de la section de présentation */
 .text {
     flex: 1;
-    /* Prend la moitié de l'espace disponible */
     padding-right: 20px;
-    /* Espacement à droite */
     text-align: left;
     padding-left: 10%;
     padding-right: 10%;
 }
 
-/* Conteneur pour l'image dans la section de présentation */
 .image {
     display: flex;
-    /* Utilise le modèle flexbox */
     justify-content: center;
-    /* Centre les éléments enfants horizontalement */
     align-items: center;
-    /* Centre les éléments enfants verticalement */
     height: 350px;
-    /* Hauteur fixe du conteneur */
     margin-right: 10%;
-    /* Marge à droite */
 }
 
 img[src="images/moipetit.jpg"] {
     border-radius: 50%;
-    /* Ceci rend l'image ronde */
     display: block;
-    /* Ceci s'assure que l'image est traitée comme un élément de bloc */
     margin: 0 auto;
-    /* Ceci centre l'image horizontalement si elle est plus petite que son conteneur */
 }
 
-/* Media Query pour les écrans de moins de 700px */
 @media screen and (max-width: 1000px) {
     .presentation {
-        flex-direction: column; /* Change la direction du flex en colonne */
-        align-items: flex-start; /* Alignement des éléments au début (en haut) */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .text, .image {
-        width: 100%; /* Donne une largeur complète à chaque élément */
-        text-align: center; /* Centre le texte pour une meilleure lisibilité */
+        width: 100%;
+        text-align: center; 
     }
 
     .image {
-        order: 2; /* Place l'image en dessous du texte */
+        order: 2;
     }
 
     .text {
-        order: 1; /* Place le texte au-dessus de l'image */
+        order: 1;
     }
 }
 
@@ -278,55 +227,45 @@ img[src="images/moipetit.jpg"] {
                               CSS réalisation
 /*=========================/*=========================*//*===================/**/
 
-/* Styles pour l'image à l'intérieur du conteneur ".image" */
 .image img {
     max-width: 100%;
-    /* Assure que l'image ne dépasse pas son conteneur */
     height: auto;
-    /* Garde le ratio d'aspect de l'image */
 }
 
 h1 {
     font-size: 3.5em;
-    /* Ceci augmentera la taille du titre. Ajustez selon vos préférences. */
     margin-bottom: 20px;
-    /* Ceci ajoutera un espace en dessous du titre. Ajustez selon vos préférences. */
 }
 
 p {
     font-size: 1.2em;
-    /* Ceci augmentera la taille du texte du paragraphe. Ajustez selon vos préférences. */
 }
 
 .realisation {
     text-align: center;
-    /* centre le titre dans la section */
     padding: 20px 0;
-    /* ajoute un peu d'espace en haut et en bas de la section */
     margin: 0;
-    padding: 0;
 }
 
 .realisation h2 {
     margin-bottom: 20px;
-    /* Ajustez cette valeur selon l'espacement souhaité */
     margin-top: 20px;
 }
 
 
 .realisation .text2 {
     display: flex;
-    justify-content: center; /* Centre le contenu */
-    align-items: stretch; /* Étire tous les éléments enfants à la même hauteur */
+    justify-content: center;
+    align-items: stretch;
     padding: 0 5%;
 }
 
 .image-container {
-    width: 30%; /* Ajustez la largeur si nécessaire */
-    margin: 0 15px; /* Ajustez la marge pour l'espacement */
+    width: 30%;
+    margin: 0 15px;
     display: flex;
-    flex-direction: column; /* Organise les éléments enfants en colonne */
-    align-items: center; /* Centre les éléments enfants horizontalement */
+    flex-direction: column;
+    align-items: center;
 }
 
 .image-container img {
@@ -343,25 +282,63 @@ p {
     font-size: 1em;
 }
 
-/* Media Query pour les écrans de moins de 700px */
 @media screen and (max-width: 1000px) {
     .realisation .text2 {
-        flex-direction: column; /* Les éléments s'alignent en colonne */
-        align-items: center; /* Centre les éléments horizontalement */
+        flex-direction: column;
+        align-items: center;
     }
 
     .realisation .image-container {
-        width: 100%; /* Chaque conteneur d'image occupe toute la largeur */
-        margin-bottom: 20px; /* Ajoute un espace entre chaque conteneur d'image */
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .realisation .image-title {
-        text-align: center; /* Centre le titre de l'image */
+        text-align: center;
         font-size: 20px;
     }
-
-    /* Ajoutez ici d'autres styles pour ajuster l'apparence si nécessaire */
 }
+
+/*=========================/*=========================/*=========================
+                              CSS service
+/*=========================/*=========================*//*===================/**/
+
+.services {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.services h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.services .text2 {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0 5%;
+}
+
+@media screen and (max-width: 1000px) {
+    .services .text2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .image-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .services .image-title {
+        text-align: center;
+        font-size: 20px;
+    }
+}
+
 
 
 /*=========================/*=========================/*=========================
@@ -371,7 +348,6 @@ p {
 .skills-container {
     text-align: center;
     width: 100%;
-    /* Ajustez selon votre design */
     margin: 0 auto;
 }
 
@@ -397,9 +373,7 @@ h2 {
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.4;
-    /* Ajustez cette valeur selon vos besoins */
     z-index: -1;
-    /* Place l'image de fond derrière le contenu */
 }
 
 .skill {
@@ -436,7 +410,6 @@ label {
 .skills-container2 {
     text-align: center;
     width: 100%;
-    /* Ajustez selon votre design */
     margin: 0 auto;
 }
 
@@ -456,9 +429,7 @@ h2 {
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.4;
-    /* Ajustez cette valeur selon vos besoins */
     z-index: -1;
-    /* Place l'image de fond derrière le contenu */
 }
 
 .skills-section2 {
@@ -466,26 +437,18 @@ h2 {
     padding: 20px;
     width: 100%;
     min-height: 900px;
-    /* Par exemple */
     display: flex;
-    /* Ajout de flex pour centrer le formulaire */
     align-items: center;
-    /* Centrage vertical */
     justify-content: center;
-    /* Centrage horizontal */
 }
 
 .contact-form {
     width: 80%;
-    /* Ajustez selon votre design */
     max-width: 2000px;
-    /* Ajustez selon votre design */
     background-color: rgba(255, 255, 255, 0.8);
-    /* Fond semi-transparent pour améliorer la lisibilité */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    /* Ombre légère autour du formulaire */
 }
 
 .form-group {
@@ -497,7 +460,6 @@ input[type="email"],
 textarea,
 input[type="submit"] {
     width: 100%;
-    /* Pour que les éléments du formulaire prennent toute la largeur */
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -506,7 +468,6 @@ input[type="submit"] {
 
 input[type="submit"] {
     background-color: #222324;
-    /* Même couleur que vos barres de progression */
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -514,7 +475,6 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #555556;
-    /* Couleur plus claire lors du survol */
 }
 
 .footer {
