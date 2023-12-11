@@ -433,7 +433,7 @@ label {
                               CSS form
 /*=========================/*=========================*//*===================/**/
 
-.skills-container2 {
+/*.skills-container2 {
     text-align: center;
     width: 100%;
     margin: 0 auto;
@@ -501,4 +501,10 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #555556;
+}*/
+
+.contact-form iframe {
+    width: 100%;
+    height: 900px; /* ou 'auto' si vous voulez que la hauteur s'adapte */
+    border: none; /* Pour supprimer la bordure */
 }
