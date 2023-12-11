@@ -219,12 +219,15 @@ a:hover {
     margin-right: 10%;
 }
 
-img[src="images/moipetit.jpg"] {
+img[src="images/moi 2023.jpg"] {
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: block;
     margin: 0 auto;
+    width: 350px; /* Ajustez la largeur selon vos besoins */
+    height: 350px; /* Ajustez la hauteur selon vos besoins */
 }
+
 
 @media screen and (max-width: 1000px) {
     .presentation {
