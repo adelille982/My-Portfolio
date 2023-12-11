@@ -21,13 +21,6 @@ nav > div {
     position: relative;
 }
 
-.hamburger-icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 50px;
-}
-
 .hidden {
     display: none;
 }
@@ -146,6 +139,10 @@ a:hover {
     color: white;
     cursor: pointer;
     z-index: 1000;
+}
+
+.hamburger-icon.open {
+    color: black;
 }
 
 @media screen and (max-width: 1000px) {

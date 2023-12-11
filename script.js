@@ -10,12 +10,12 @@ hamburgerBtn.addEventListener('click', toggleMenu);
 function toggleMenu() {
     if (isNavDisplayed) {
         menu.classList.add('hidden'); // Cache le menu
-        hamburgerBtn.classList.remove('bi-x'); // Change en icône de menu burger
+        hamburgerBtn.classList.remove('bi-x', 'open'); // Retire la classe pour la croix noire
         hamburgerBtn.classList.add('bi-list');
     } else {
         menu.classList.remove('hidden'); // Affiche le menu
-        hamburgerBtn.classList.remove('bi-list'); // Change en icône de croix
-        hamburgerBtn.classList.add('bi-x');
+        hamburgerBtn.classList.remove('bi-list');
+        hamburgerBtn.classList.add('bi-x', 'open'); // Ajoute la classe pour la croix noire
     }
     isNavDisplayed = !isNavDisplayed; // Bascule l'état d'affichage
 }
