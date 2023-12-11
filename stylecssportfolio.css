@@ -17,7 +17,8 @@ body {
     margin: 0;
     background-color: rgb(204, 204, 204);
 }
-nav > div {
+
+nav>div {
     position: relative;
 }
 
@@ -46,9 +47,36 @@ ul {
     padding: 0;
 }
 
+/*=========================/*
+        CSS image
+/*=========================*/
+
+#imageprincipal {
+    position: relative;
+    width: 100%;
+    padding-bottom: 37.5%;
+    overflow: hidden;
+}
+
+#imageprincipal img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*=========================/*
+        CSS media querie
+/*=========================*/
+
 @media screen and (max-width: 1000px) {
 
-    header, nav, .presentation .text, .presentation .image {
+    header,
+    nav,
+    .presentation .text,
+    .presentation .image {
         width: 100%;
     }
 
@@ -83,29 +111,9 @@ footer {
     color: #313fff;
 }
 
-/*=========================/*
-        CSS image
-/*=========================*/
-
-#imageprincipal {
-    position: relative;
-    width: 100%;
-    padding-bottom: 37.5%;
-    overflow: hidden;
-}
-
-#imageprincipal img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/*=========================/*
-        CSS navbar
-/*=========================*/
+/*=========================/*=========================/*=========================
+                              CSS pour la navbar
+=========================*//*=========================/*=========================*/
 
 ul {
     list-style-type: none;
@@ -151,6 +159,10 @@ a:hover {
     font-size: 60px;
 }
 
+/*=========================/*
+        CSS media querie
+/*=========================*/
+
 @media screen and (max-width: 1000px) {
     .menu {
         position: flex;
@@ -184,12 +196,12 @@ a:hover {
     }
 }
 
-
 @media screen and (min-width: 1000px) {
     .hamburger-icon {
         display: none;
     }
 }
+
 /*=========================/*=========================/*=========================
                               CSS présentation
 /*=========================/*=========================*//*===================/**/
@@ -224,10 +236,15 @@ img[src="images/moi 2023.jpg"] {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: block;
     margin: 0 auto;
-    width: 350px; /* Ajustez la largeur selon vos besoins */
-    height: 350px; /* Ajustez la hauteur selon vos besoins */
+    width: 350px;
+    /* Ajustez la largeur selon vos besoins */
+    height: 350px;
+    /* Ajustez la hauteur selon vos besoins */
 }
 
+/*=========================/*
+        CSS media querie
+/*=========================*/
 
 @media screen and (max-width: 1000px) {
     .presentation {
@@ -235,9 +252,10 @@ img[src="images/moi 2023.jpg"] {
         align-items: flex-start;
     }
 
-    .text, .image {
+    .text,
+    .image {
         width: 100%;
-        text-align: center; 
+        text-align: center;
     }
 
     .image {
@@ -310,6 +328,10 @@ p {
     margin-bottom: 30px;
 }
 
+/*=========================/*
+        CSS media querie
+/*=========================*/
+
 @media screen and (max-width: 1000px) {
     .realisation .text2 {
         flex-direction: column;
@@ -351,6 +373,10 @@ p {
     padding: 0 5%;
 }
 
+/*=========================/*
+        CSS media querie
+/*=========================*/
+
 @media screen and (max-width: 1000px) {
     .services .text2 {
         flex-direction: column;
@@ -367,8 +393,6 @@ p {
         font-size: 20px;
     }
 }
-
-
 
 /*=========================/*=========================/*=========================
                               CSS progress bar / compétence
@@ -508,6 +532,8 @@ input[type="submit"]:hover {
 
 .contact-form iframe {
     width: 100%;
-    height: 900px; /* ou 'auto' si vous voulez que la hauteur s'adapte */
-    border: none; /* Pour supprimer la bordure */
+    height: 900px;
+    /* ou 'auto' si vous voulez que la hauteur s'adapte */
+    border: none;
+    /* Pour supprimer la bordure */
 }
