@@ -21,6 +21,11 @@ nav > div {
     position: relative;
 }
 
+nav div ul.menu li .nav-link {
+    text-decoration: none;
+}
+
+
 .hidden {
     display: none;
 }
