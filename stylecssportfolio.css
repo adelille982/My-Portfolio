@@ -433,7 +433,7 @@ label {
                               CSS form
 /*=========================/*=========================*//*===================/**/
 
-/*.skills-container2 {
+.skills-container2 {
     text-align: center;
     width: 100%;
     margin: 0 auto;
@@ -477,7 +477,7 @@ h2 {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.form-group {
+/*.form-group {
     margin-bottom: 20px;
 }
 
