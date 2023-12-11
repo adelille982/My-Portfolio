@@ -186,6 +186,7 @@ a:hover {
     text-align: left;
     padding-left: 10%;
     padding-right: 10%;
+    margin-bottom: 30px;
 }
 
 .image {
@@ -281,6 +282,7 @@ p {
     text-align: center;
     margin-top: 10px;
     font-size: 1em;
+    margin-bottom: 30px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -308,6 +310,7 @@ p {
     text-align: center;
     padding: 20px 0;
     margin: 0;
+    margin-bottom: 30px;
 }
 
 .services h2 {
