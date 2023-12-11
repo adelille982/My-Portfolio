@@ -147,7 +147,7 @@ a:hover {
 
 @media screen and (max-width: 1000px) {
     .menu {
-        position: relative;
+        position: flex;
         flex-direction: column;
         text-align: center;
         height: 100vh;

@@ -3,7 +3,7 @@ window.addEventListener('resize', handleResize);
 
 const hamburgerBtn = document.querySelector('.hamburger-icon');
 const menu = document.querySelector('.menu');
-let isNavDisplayed = false; // Suivre l'état d'affichage du menu
+let isNavDisplayed = false;
 
 hamburgerBtn.addEventListener('click', toggleMenu);
 
@@ -17,22 +17,21 @@ function toggleMenu() {
         hamburgerBtn.classList.remove('bi-list');
         hamburgerBtn.classList.add('bi-x', 'open'); // Ajoute la classe pour la croix noire
     }
-    isNavDisplayed = !isNavDisplayed; // Bascule l'état d'affichage
+    isNavDisplayed = !isNavDisplayed;
 }
 
 function handleResize() {
     if (window.innerWidth >= 1000) {
-        // Sur les grands écrans, affiche toujours le menu et réinitialise l'icône
-        menu.classList.remove('hidden');
-        hamburgerBtn.classList.remove('bi-x');
-        hamburgerBtn.classList.add('bi-list');
-        isNavDisplayed = true;
-    } else {
-        // Sur les petits écrans, cache toujours le menu et réinitialise l'icône
-        menu.classList.add('hidden');
-        hamburgerBtn.classList.remove('bi-x');
+        menu.classList.remove('hidden', 'open'); // Assurez-vous que le menu est affiché normalement
+        hamburgerBtn.classList.remove('bi-x', 'open');
         hamburgerBtn.classList.add('bi-list');
         isNavDisplayed = false;
+    } else {
+        if (!isNavDisplayed) {
+            menu.classList.add('hidden');
+            hamburgerBtn.classList.remove('bi-x', 'open');
+            hamburgerBtn.classList.add('bi-list');
+        }
     }
 }
 
@@ -40,11 +39,11 @@ function initializeMenu() {
     if (window.innerWidth < 1000) {
         menu.classList.add('hidden');
         hamburgerBtn.classList.add('bi-list');
-        hamburgerBtn.classList.remove('bi-x');
+        hamburgerBtn.classList.remove('bi-x', 'open');
         isNavDisplayed = false;
     } else {
         menu.classList.remove('hidden');
-        hamburgerBtn.classList.remove('bi-x');
+        hamburgerBtn.classList.remove('bi-x', 'open');
         hamburgerBtn.classList.add('bi-list');
         isNavDisplayed = true;
     }
