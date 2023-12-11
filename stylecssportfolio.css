@@ -143,6 +143,7 @@ a:hover {
 
 .hamburger-icon.open {
     color: white;
+    font-size: 60px;
 }
 
 @media screen and (max-width: 1000px) {
