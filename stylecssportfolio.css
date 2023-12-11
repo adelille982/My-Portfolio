@@ -26,7 +26,6 @@ nav div ul.menu li .nav-link {
     text-decoration: none;
 }
 
-
 .hidden {
     display: none;
 }
@@ -71,7 +70,7 @@ ul {
         CSS media querie
 /*=========================*/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
 
     header,
     nav,
@@ -155,15 +154,42 @@ a:hover {
 }
 
 .hamburger-icon.open {
-    color: white;
+    color: black;
     font-size: 60px;
+}
+
+/* Styles pour Spline Viewer */
+spline-viewer {
+    width: 100%; /* Adaptez la largeur selon vos besoins */
+    height: 100vh; /* Adaptez la hauteur selon vos besoins */
+    position: absolute; /* Assurez-vous qu'il couvre tout le menu */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Placez-le derrière les éléments du menu */
+    transition: opacity 0.5s ease; /* Transition douce pour l'opacité */
+}
+
+.menu.closed spline-viewer {
+    opacity: 0; /* Cache l'animation lorsque le menu est fermé */
+    visibility: hidden; /* Assurez-vous qu'elle n'interfère pas avec d'autres éléments */
+}
+
+.menu.open spline-viewer {
+    opacity: 1; /* Affiche l'animation lorsque le menu est ouvert */
+    visibility: visible; /* Rend l'animation visible */
+}
+
+@media screen and (min-width: 1050px) {
+    spline-viewer {
+        display: none;
+    }
 }
 
 /*=========================/*
         CSS media querie
 /*=========================*/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
     .menu {
         position: flex;
         flex-direction: column;
@@ -174,29 +200,14 @@ a:hover {
         z-index: 1;
     }
 
-    .menu::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url('images/Vue\ rapprochée\ d\'une\ série\ de\ codes\ sur\ un\ écran\ d\'ordinateur.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        opacity: 0.1;
-        z-index: -1;
-    }
-
     ul li {
-        color: white;
+        color: black;
         position: relative;
         z-index: 2;
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1050px) {
     .hamburger-icon {
         display: none;
     }
@@ -246,7 +257,7 @@ img[src="images/moi 2023.jpg"] {
         CSS media querie
 /*=========================*/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
     .presentation {
         flex-direction: column;
         align-items: flex-start;
@@ -266,7 +277,6 @@ img[src="images/moi 2023.jpg"] {
         order: 1;
     }
 }
-
 
 /*=========================/*=========================/*=========================
                               CSS réalisation
@@ -296,7 +306,6 @@ p {
     margin-bottom: 20px;
     margin-top: 20px;
 }
-
 
 .realisation .text2 {
     display: flex;
@@ -332,7 +341,7 @@ p {
         CSS media querie
 /*=========================*/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
     .realisation .text2 {
         flex-direction: column;
         align-items: center;
@@ -365,7 +374,6 @@ p {
     margin-top: 20px;
 }
 
-
 .services .text2 {
     display: flex;
     justify-content: center;
@@ -377,7 +385,7 @@ p {
         CSS media querie
 /*=========================*/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
     .services .text2 {
         flex-direction: column;
         align-items: center;
